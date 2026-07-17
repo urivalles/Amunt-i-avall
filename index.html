@@ -15,8 +15,7 @@
     <header class="header" id="header">
         <div class="container nav-container">
             <a href="#inici" class="logo" id="nav-logo">
-                <div class="logo-icon">▲</div>
-                <span>Amunt i <span class="highlight">Avall</span></span>
+                <img src="img/logo.png" alt="Amunt i Avall" class="logo-img">
             </a>
             
             <nav class="nav-menu" id="nav-menu">
@@ -40,7 +39,7 @@
     <section class="hero" id="inici">
         <div class="hero-bg">
             <!-- NOTA: Utilitzem la imatge generada específicament pel projecte -->
-            <img src="C:/Users/titon/.gemini/antigravity-ide/brain/286de169-2a46-441f-853c-436900853a21/hero_vertical_work_1784276917048.png" alt="Tècnic de treballs verticals netejant una façana de vidre amb ventoses" id="hero-image">
+            <img src="img/hero_vertical_work.png" alt="Tècnic de treballs verticals netejant una façana de vidre amb ventoses" id="hero-image">
         </div>
         
         <div class="container">
@@ -64,7 +63,7 @@
     <section class="section" id="empresa">
         <div class="container">
             <div class="section-header">
-                <span class="section-subtitle">Qui som</span>
+                <span class="section-subtitle">Qui som?</span>
                 <h2 class="section-title" id="about-heading">Solucions de Manteniment Elevat</h2>
                 <p class="section-desc">Oferim un servei integral per a qualsevol problema a la façana, teulada o estructura del teu edifici, garantint seguretat absoluta i reduint costos.</p>
             </div>
@@ -72,8 +71,8 @@
             <div class="about-grid">
                 <div class="about-text">
                     <h3>Compromesos amb la qualitat i la precisió</h3>
-                    <p>A <strong>Amunt i Avall</strong> ens dediquem a oferir serveis de neteja, reparació i construcció a llocs de difícil accés. L'experiència en tècniques d'accés per corda ens permet arribar on altres no poden, evitant els alts costos i molèsties de muntar bastides complexes des del terra per a tasques puntuals.</p>
-                    <p>Utilitzem materials d'alta gamma i equips d'escalada i seguretat de darrera generació. Tots els nostres tècnics estan altament qualificats per a treballs verticals de qualsevol envergadura.</p>
+                    <p>A <strong>Amunt i Avall</strong> ens dediquem a oferir serveis de neteja, reparació i manteniment a llocs de difícil accés a <strong>tota Catalunya</strong>. La nostra especialització en tècniques d'accés per corda ens permet arribar on d'altres no poden, evitant els alts costos i les molèsties de muntar bastides complexes des del terra per a tasques puntuals.</p>
+                    <p>Utilitzem materials d'alta gamma i equips d'escalada homologats. Tots els nostres tècnics compten amb la prestigiosa certificació internacional <strong>IRATA</strong> i formació en <strong>Prevenció de Riscos Laborals (PRL) de la Construcció</strong>, garantint la màxima seguretat i professionalitat en treballs de qualsevol envergadura.</p>
                     
                     <div class="about-features">
                         <div class="feature-badge">
@@ -88,8 +87,8 @@
                         </div>
                         <div class="feature-badge">
                             <span class="feature-badge-icon">🏆</span>
-                            <h4>Experiència</h4>
-                            <p>Equip professional certificat en alçada.</p>
+                            <h4>Formació</h4>
+                            <p>Tècnics certificats al corrent de la normativa.</p>
                         </div>
                         <div class="feature-badge">
                             <span class="feature-badge-icon">🤝</span>
@@ -100,16 +99,12 @@
                 </div>
                 
                 <div class="about-visual">
-                    <img src="C:/Users/titon/.gemini/antigravity-ide/brain/286de169-2a46-441f-853c-436900853a21/hero_vertical_work_1784276917048.png" alt="Detall de seguretat en treballs verticals" id="about-image-visual">
+                    <img src="img/hero_vertical_work.png" alt="Detall de seguretat en treballs verticals" id="about-image-visual">
                     <div class="about-visual-overlay">
                         <div class="stat-box">
-                            <div class="stat-item">
-                                <div class="stat-number">100%</div>
-                                <div class="stat-label">Seguretat</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">+150</div>
-                                <div class="stat-label">Projectes</div>
+                            <div class="stat-item" style="text-align: left;">
+                                <div class="stat-number" style="font-size: 1.25rem; font-weight: 800; letter-spacing: 0.05em; text-transform: uppercase;">Solucions d'Alçada</div>
+                                <div class="stat-label" style="color: #cbd5e1; font-size: 0.8rem; text-transform: none; letter-spacing: 0;">Treball professional, segur i garantit</div>
                             </div>
                         </div>
                     </div>
@@ -122,7 +117,7 @@
     <section class="section" id="serveis" style="background-color: var(--bg-secondary);">
         <div class="container">
             <div class="section-header">
-                <span class="section-subtitle">Què fem</span>
+                <span class="section-subtitle">Què fem?</span>
                 <h2 class="section-title" id="services-heading">Especialitats Professionals</h2>
                 <p class="section-desc">Dividim els nostres serveis en dues grans àrees per oferir la solució exacta al teu problema.</p>
             </div>
@@ -132,8 +127,11 @@
                 <!-- PANNELL 1: TREBALLS VERTICALS -->
                 <div class="panel panel-1" id="panel-verticals">
                     <div class="panel-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 2v20M5 12h14M19 5l-7 7-7-7"/>
+                        <!-- Mosquetó de seguretat i corda de treball vertical -->
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 3h6a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5z" />
+                            <rect x="14" y="9" width="4" height="6" rx="1" fill="currentColor" />
+                            <path d="M10 2v20" stroke="currentColor" stroke-width="1.8" stroke-dasharray="3,3" />
                         </svg>
                     </div>
                     <h3 class="panel-title">1. Treballs Verticals</h3>
@@ -181,12 +179,15 @@
                 <!-- PANNELL 2: TREBALLS EN ALTURA -->
                 <div class="panel panel-2" id="panel-altura">
                     <div class="panel-icon">
+                        <!-- Torre d'andamiatge tubular (Bastida Layher) -->
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                            <line x1="9" y1="3" x2="9" y2="21"/>
-                            <line x1="15" y1="3" x2="15" y2="21"/>
-                            <line x1="3" y1="9" x2="21" y2="9"/>
-                            <line x1="3" y1="15" x2="21" y2="15"/>
+                            <rect x="4" y="2" width="16" height="20" rx="1" />
+                            <line x1="4" y1="9" x2="20" y2="9" stroke-width="2.5" />
+                            <line x1="4" y1="16" x2="20" y2="16" stroke-width="2.5" />
+                            <line x1="4" y1="2" x2="20" y2="9" stroke-width="1.5" />
+                            <line x1="20" y1="2" x2="4" y2="9" stroke-width="1.5" />
+                            <line x1="4" y1="9" x2="20" y2="16" stroke-width="1.5" />
+                            <line x1="20" y1="9" x2="4" y2="16" stroke-width="1.5" />
                         </svg>
                     </div>
                     <h3 class="panel-title">2. Treballs en Altura</h3>
@@ -247,20 +248,31 @@
                     </p>
                     <div class="security-list">
                         <div class="security-item">
-                            <span class="security-icon">🛡️</span> Homologació EN-363 per a sistemes anticaigudes.
+                            <span class="security-icon">🛡️</span>
+                            <span>Certificació internacional <strong>IRATA</strong> (treball segur amb accés per corda).</span>
                         </div>
                         <div class="security-item">
-                            <span class="security-icon">🛡️</span> Línies de vida i punts d'ancoratge temporals de seguretat duplicada.
+                            <span class="security-icon">🛡️</span>
+                            <span>Formació certificada en <strong>Prevenció de Riscos Laborals (PRL)</strong> per a la construcció.</span>
                         </div>
                         <div class="security-item">
-                            <span class="security-icon">🛡️</span> Equip professional amb formació contínua i assegurança específica.
+                            <span class="security-icon">🛡️</span>
+                            <span>Protocols i equips anticaigudes homologats sota la normativa EN-363 amb línies de vida de seguretat duplicada.</span>
                         </div>
                     </div>
                 </div>
                 <div class="security-shield">
                     <div class="shield-graphic">
                         <div class="shield-graphic-inner">
-                            🔒
+                            <!-- Casc de seguretat professional detallat -->
+                            <svg width="65" height="65" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 12a10 10 0 0 1 20 0" fill="currentColor" fill-opacity="0.1" />
+                                <path d="M12 2v10" stroke-width="2.5" />
+                                <path d="M1 13h22l-1.5 2H2.5L1 13z" fill="currentColor" />
+                                <path d="M7 8a9.9 9.9 0 0 1 4-3" />
+                                <path d="M17 8a9.9 9.9 0 0 0-4-3" />
+                                <path d="M7 14.5v1.5a5 5 0 0 0 10 0v-1.5" />
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -283,21 +295,42 @@
                     </div>
                     
                     <div class="contact-details">
-                        <div class="contact-card">
-                            <div class="contact-card-icon">📞</div>
+                        <a href="tel:+34642679139" class="contact-card phone-card" style="text-decoration: none; color: inherit;">
+                            <div class="contact-card-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
                             <div class="contact-card-content">
                                 <h4>Truca'ns</h4>
                                 <p>+34 642 679 139</p>
                             </div>
-                        </div>
+                        </a>
+
+                        <a href="https://wa.me/34642679139" target="_blank" rel="noopener noreferrer" class="contact-card whatsapp-card" style="text-decoration: none; color: inherit;">
+                            <div class="contact-card-icon">
+                                <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                                    <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                                </svg>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>WhatsApp</h4>
+                                <p>Envia'ns un missatge</p>
+                            </div>
+                        </a>
                         
-                        <div class="contact-card">
-                            <div class="contact-card-icon">✉️</div>
+                        <a href="mailto:info@amuntiavall.cat" class="contact-card email-card" style="text-decoration: none; color: inherit;">
+                            <div class="contact-card-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
                             <div class="contact-card-content">
                                 <h4>Correu electrònic</h4>
                                 <p>info@amuntiavall.cat</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 
@@ -371,8 +404,7 @@
         <div class="container">
             <div class="footer-content">
                 <a href="#inici" class="logo">
-                    <div class="logo-icon">▲</div>
-                    <span>Amunt i <span class="highlight">Avall</span></span>
+                    <img src="img/logo.png" alt="Amunt i Avall" class="logo-img">
                 </a>
                 <ul class="footer-nav">
                     <li><a href="#inici" class="footer-link">Inici</a></li>
@@ -387,10 +419,17 @@
             
             <div class="footer-bottom">
                 <p>&copy; 2026 Amunt i Avall - Tots els drets reservats.</p>
-                <p>Dissenyat per <a href="https://github.com/urivalles" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: var(--primary);">Oriol Vallès</a>.</p>
+                <p>Web dissenyada per <a href="https://github.com/urivalles" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: var(--primary);">Oriol Vallès</a>.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/34642679139" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar per WhatsApp">
+        <svg viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg>
+    </a>
 
     <!-- JS Scripts -->
     <script src="app.js"></script>

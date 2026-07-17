@@ -7,22 +7,22 @@
 
 /* Variables de Disseny */
 :root {
-    --bg-primary: #0b0f19;
-    --bg-secondary: #111827;
-    --bg-card: rgba(17, 24, 39, 0.7);
-    --bg-card-hover: rgba(31, 41, 55, 0.85);
+    --bg-primary: #ffffff;
+    --bg-secondary: #f4f7fa;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f8fafc;
     
     --primary: #ea580c; /* Taronja de seguretat */
     --primary-hover: #c2410c;
-    --primary-glow: rgba(234, 88, 12, 0.3);
+    --primary-glow: rgba(234, 88, 12, 0.15);
     
-    --accent: #eab308; /* Groc d'obra/alerta */
-    --accent-glow: rgba(234, 179, 8, 0.2);
+    --accent: #3a6b8c; /* Blau acer de les lletres del logo */
+    --accent-glow: rgba(58, 107, 140, 0.15);
     
-    --text-main: #f9fafb;
-    --text-muted: #9ca3af;
+    --text-main: #0d2235; /* Blau marí fosc del logo */
+    --text-muted: #4b5d6c;
     
-    --border-color: rgba(255, 255, 255, 0.08);
+    --border-color: rgba(58, 107, 140, 0.12);
     --border-hover: rgba(234, 88, 12, 0.4);
     
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -91,17 +91,17 @@ ul {
     width: 100%;
     z-index: 1000;
     transition: var(--transition-smooth);
-    padding: 1.25rem 0;
+    padding: 1.5rem 0;
     border-bottom: 1px solid transparent;
 }
 
 .header.scrolled {
-    background: rgba(11, 15, 25, 0.85);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    padding: 0.8rem 0;
+    padding: 0.6rem 0;
     border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(13, 34, 53, 0.06);
 }
 
 .nav-container {
@@ -118,6 +118,35 @@ ul {
     font-weight: 800;
     font-size: 1.4rem;
     color: var(--text-main);
+}
+
+.logo-img {
+    height: 125px; /* Mida gran de benvinguda a l'inici per llegir la lletra petita */
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    transition: var(--transition-smooth);
+}
+
+/* Mida reduïda quan es fa scroll down */
+.header.scrolled .logo-img {
+    height: 65px;
+}
+
+.logo-img:hover {
+    transform: scale(1.70); /* Incrementat al 1.70 per a un zoom de gran impacte en hover */
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 85px; /* Mida inicial continguda a mòbils */
+    }
+    .header {
+        padding: 0.8rem 0;
+    }
+    .header.scrolled .logo-img {
+        height: 52px; /* Mida scroll a mòbils per llegir-se bé */
+    }
 }
 
 .logo-icon {
@@ -219,7 +248,7 @@ ul {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 200px;
     padding-bottom: 60px;
     overflow: hidden;
 }
@@ -237,8 +266,8 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    filter: brightness(0.35) contrast(1.1);
+    object-position: right center;
+    filter: brightness(0.95) contrast(1.05);
 }
 
 .hero-bg::after {
@@ -248,9 +277,9 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 70% 30%, rgba(234, 88, 12, 0.08), transparent 50%),
+    background: radial-gradient(circle at 70% 30%, rgba(234, 88, 12, 0.05), transparent 50%),
                 linear-gradient(to bottom, var(--bg-primary) 0%, transparent 20%, transparent 80%, var(--bg-primary) 100%),
-                linear-gradient(to right, var(--bg-primary) 0%, rgba(11, 15, 25, 0.8) 50%, transparent 100%);
+                linear-gradient(to right, var(--bg-primary) 0%, rgba(255, 255, 255, 0.85) 60%, transparent 100%);
 }
 
 .hero .container {
@@ -295,7 +324,7 @@ ul {
     font-weight: 800;
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
-    background: linear-gradient(135deg, #ffffff 60%, var(--text-muted));
+    background: linear-gradient(135deg, var(--text-main) 60%, var(--text-muted));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -456,7 +485,7 @@ ul {
     font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--text-muted);
+    color: #cbd5e1;
 }
 
 /* SERVEIS (ELS 2 GRANS APARTATS) */
@@ -475,6 +504,7 @@ ul {
     transition: var(--transition-smooth);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(13, 34, 53, 0.03);
 }
 
 .panel::before {
@@ -492,7 +522,7 @@ ul {
 .panel:hover {
     transform: translateY(-5px);
     border-color: var(--border-hover);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px var(--primary-glow);
+    box-shadow: 0 20px 40px rgba(13, 34, 53, 0.08), 0 0 30px var(--primary-glow);
 }
 
 .panel-icon {
@@ -500,20 +530,20 @@ ul {
     color: var(--primary);
     margin-bottom: 1.5rem;
     display: inline-block;
-    background: rgba(234, 88, 12, 0.1);
+    background: rgba(234, 88, 12, 0.08);
     width: 4.5rem;
     height: 4.5rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 16px;
-    border: 1px solid rgba(234, 88, 12, 0.2);
+    border: 1px solid rgba(234, 88, 12, 0.15);
 }
 
 .panel-2 .panel-icon {
     color: var(--accent);
-    background: rgba(234, 179, 8, 0.1);
-    border: 1px solid rgba(234, 179, 8, 0.2);
+    background: var(--accent-glow);
+    border: 1px solid rgba(58, 107, 140, 0.15);
 }
 
 .panel-2::before {
@@ -581,7 +611,7 @@ ul {
 
 /* SEGURETAT */
 .security-banner {
-    background: linear-gradient(135deg, #111827, #0b0f19);
+    background: linear-gradient(135deg, var(--accent), var(--text-main));
     border: 1px solid var(--border-color);
     border-radius: 24px;
     padding: 4rem;
@@ -591,6 +621,7 @@ ul {
     align-items: center;
     overflow: hidden;
     position: relative;
+    color: #ffffff;
 }
 
 .security-banner::after {
@@ -611,7 +642,7 @@ ul {
 }
 
 .security-desc {
-    color: var(--text-muted);
+    color: #cbd5e1;
     margin-bottom: 2rem;
 }
 
@@ -708,22 +739,68 @@ ul {
     transition: var(--transition-smooth);
 }
 
-.contact-card:hover {
-    border-color: var(--border-hover);
-    background: var(--bg-card-hover);
+/* Targeta Telèfon */
+.phone-card .contact-card-icon {
+    background: rgba(234, 88, 12, 0.06);
+    border: 1px solid rgba(234, 88, 12, 0.12);
+    color: var(--primary);
+}
+
+.phone-card:hover {
+    border-color: var(--primary) !important;
+    background: rgba(234, 88, 12, 0.03) !important;
+}
+
+.phone-card:hover .contact-card-icon {
+    background: var(--primary) !important;
+    color: #ffffff !important;
+    border-color: var(--primary) !important;
+}
+
+/* Targeta Correu */
+.email-card .contact-card-icon {
+    background: var(--accent-glow);
+    border: 1px solid rgba(58, 107, 140, 0.12);
+    color: var(--accent);
+}
+
+.email-card:hover {
+    border-color: var(--accent) !important;
+    background: rgba(58, 107, 140, 0.03) !important;
+}
+
+.email-card:hover .contact-card-icon {
+    background: var(--accent) !important;
+    color: #ffffff !important;
+    border-color: var(--accent) !important;
+}
+
+/* Targeta WhatsApp */
+.whatsapp-card .contact-card-icon {
+    background: rgba(37, 211, 102, 0.06);
+    border: 1px solid rgba(37, 211, 102, 0.12);
+    color: #25D366;
+}
+
+.whatsapp-card:hover {
+    border-color: #25D366 !important;
+    background: rgba(37, 211, 102, 0.03) !important;
+}
+
+.whatsapp-card:hover .contact-card-icon {
+    background: #25D366 !important;
+    color: #ffffff !important;
+    border-color: #25D366 !important;
 }
 
 .contact-card-icon {
     width: 3rem;
     height: 3rem;
-    background: rgba(234, 88, 12, 0.1);
-    border: 1px solid rgba(234, 88, 12, 0.2);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
-    font-size: 1.25rem;
+    transition: var(--transition-smooth);
 }
 
 .contact-card-content h4 {
@@ -745,9 +822,7 @@ ul {
     padding: 3rem;
     border-radius: 24px;
     position: relative;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 45px rgba(13, 34, 53, 0.05);
 }
 
 .quote-form-container::before {
@@ -756,7 +831,7 @@ ul {
     inset: 0;
     border-radius: 24px;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02) 50%, rgba(234, 88, 12, 0.1));
+    background: linear-gradient(135deg, rgba(13, 34, 53, 0.05), rgba(255, 255, 255, 0.02) 50%, rgba(234, 88, 12, 0.05));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -784,7 +859,7 @@ ul {
 
 .form-control {
     width: 100%;
-    background: rgba(0, 0, 0, 0.2);
+    background: #f8fafc;
     border: 1px solid var(--border-color);
     color: var(--text-main);
     padding: 0.85rem 1.25rem;
@@ -798,7 +873,7 @@ ul {
     outline: none;
     border-color: var(--primary);
     box-shadow: 0 0 12px var(--primary-glow);
-    background: rgba(0, 0, 0, 0.3);
+    background: #ffffff;
 }
 
 select.form-control {
@@ -876,7 +951,7 @@ textarea.form-control {
 
 /* FOOTER */
 .footer {
-    background-color: #060911;
+    background-color: #eef2f5;
     border-top: 1px solid var(--border-color);
     padding: 50px 0 30px 0;
 }
@@ -1088,3 +1163,65 @@ textarea.form-control {
         gap: 1rem;
     }
 }
+
+/* BOTÓ FLOTANT DE WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 6px 20px rgba(18, 140, 126, 0.6);
+}
+
+.whatsapp-float svg {
+    fill: currentColor;
+    width: 32px;
+    height: 32px;
+}
+
+/* Targeta WhatsApp a la secció de contacte */
+.whatsapp-card {
+    transition: var(--transition-smooth);
+}
+
+.whatsapp-card:hover {
+    border-color: #25D366 !important;
+    background: rgba(37, 211, 102, 0.05) !important;
+}
+
+.whatsapp-card:hover .contact-card-icon {
+    background: #25D366 !important;
+    color: white !important;
+    border-color: #25D366 !important;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .whatsapp-float svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+

@@ -134,7 +134,7 @@ ul {
 }
 
 .logo-img:hover {
-    transform: scale(1.70); /* Incrementat al 1.70 per a un zoom de gran impacte en hover */
+    transform: scale(1.30); /* Incrementat al 1.70 per a un zoom de gran impacte en hover */
 }
 
 @media (max-width: 768px) {
@@ -1169,7 +1169,7 @@ textarea.form-control {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 30px;
+    bottom: 50px;
     right: 30px;
     background-color: #25D366;
     color: #fff;
@@ -1216,7 +1216,7 @@ textarea.form-control {
     .whatsapp-float {
         width: 50px;
         height: 50px;
-        bottom: 20px;
+        bottom: 40px;
         right: 20px;
     }
     .whatsapp-float svg {
